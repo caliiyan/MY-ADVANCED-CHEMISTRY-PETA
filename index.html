@@ -3,120 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exploring Everyday Chemistry: A Dive into Common Products</title>
+    <title>Chemical Composition of Everyday Products</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f4f6;
-            color: #333;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
         }
-        .container {
-            width: 80%;
-            margin: 2em auto;
-            padding: 2em;
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
-        h1, h2, h3 {
-            color: #007acc;
+
+        /* Cover Page Styling */
+        .cover-page {
             text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #4CAF50, #ff9800);
+            color: white;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
         }
-        h1 {
-            font-size: 2em;
+
+        .cover-page h1 {
+            font-size: 45px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+            animation: fadeIn 2s ease-out;
         }
-        h3 {
-            margin-top: 1.5em;
+
+        .cover-page h3 {
+            font-size: 28px;
+            margin-top: 15px;
+            font-style: italic;
+            animation: slideUp 1.5s ease-out;
         }
-        .table-container {
-            overflow-x: auto;
+
+        .cover-page p {
+            font-size: 20px;
+            margin-top: 10px;
+            animation: fadeInUp 2.5s ease-out;
         }
+
+        /* Table Styles */
         table {
             width: 100%;
+            margin: 50px auto;
             border-collapse: collapse;
-            margin: 1.5em 0;
-            font-size: 1em;
-            color: #444;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(20px);
+            animation: slideIn 2s ease-out forwards;
         }
-        table, th, td {
+
+        th, td {
+            padding: 15px;
+            text-align: center;
             border: 1px solid #ddd;
-            padding: 12px;
-            text-align: center;
+            font-size: 18px;
         }
+
         th {
-            background-color: #007acc;
+            background-color: #4CAF50;
             color: white;
+            font-weight: bold;
         }
+
+        td {
+            background-color: #fff;
+        }
+
+        /* Button Styling */
+        .btn {
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 16px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin-top: 20px;
+            display: block;
+            margin: 30px auto;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #f57c00;
+        }
+
+        /* Reflection Section */
         .reflection {
-            margin-top: 2em;
-            padding: 1.5em;
-            background-color: #e8f0fe;
-            border-left: 4px solid #007acc;
+            background-color: #ffecb3;
+            padding: 20px;
+            margin-top: 50px;
+            border-left: 10px solid #4CAF50;
+            font-size: 18px;
+            line-height: 1.6;
+            animation: fadeInUp 2.5s ease-out;
         }
-        .footer {
-            text-align: center;
-            margin-top: 2em;
-            font-size: 0.9em;
-            color: #555;
+
+        /* A4 Page Layout */
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        @media print {
+            body {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+            }
+            .cover-page {
+                padding: 40px;
+            }
+            table {
+                margin-top: 40px;
+            }
+            .reflection {
+                margin-top: 40px;
+                padding: 15px;
+            }
+        }
+
+        /* Animation Effects */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Exploring Everyday Chemistry: A Dive into Common Products</h1>
-    <h2>Lianne Joy E. Lopez, Section: Newton</h2>
-
-    <div class="table-container">
-        <h3>Ingredient Analysis Table</h3>
-        <table>
-            <tr>
-                <th>Product</th>
-                <th>Chemical Name and Formula</th>
-                <th>Formula/Molecular Mass</th>
-                <th>Percentage Composition</th>
-                <th>Number of Moles</th>
-                <th>Empirical/Molecular Formula</th>
-            </tr>
-            <tr>
-                <td>Coca-Cola</td>
-                <td>Carbonated Water (H₂O)</td>
-                <td>18 g/mol</td>
-                <td>88.81% O, 11.19% H</td>
-                <td>1.11 mol (assuming 20 g H₂O in 355 ml)</td>
-                <td>H₂O</td>
-            </tr>
-            <tr>
-                <td>Milk Loaded</td>
-                <td>Sucrose (C₁₂H₂₂O₁₁)</td>
-                <td>342 g/mol</td>
-                <td>42.11% C, 6.43% H, 51.46% O</td>
-                <td>0.15 mol (assuming 50 g sucrose)</td>
-                <td>C₁₂H₂₂O₁₁</td>
-            </tr>
-            <tr>
-                <td>Safeguard Soap</td>
-                <td>Sodium Chloride (NaCl)</td>
-                <td>58 g/mol</td>
-                <td>39.34% Na, 60.66% Cl</td>
-                <td>0.5 mol (assuming 30 g NaCl)</td>
-                <td>NaCl</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="reflection">
-        <h3>Reflection</h3>
-        <p><strong>The Importance of Knowing the Chemical Composition:</strong> Understanding the chemical composition of everyday products helps us make informed choices about what we use and consume. Knowing about substances like fructose in Coca-Cola, lactose in Milk Loaded, and triclosan in Safeguard reveals their impact on our health and environment. By recognizing these ingredients, we become more conscious of their effects and can select products that align with our values on health, safety, and sustainability. This knowledge also deepens our appreciation of chemistry's role in daily life.</p>
-        <p><strong>Why Manufacturers Don’t Use Real Chemical Names:</strong> Manufacturers avoid using complex chemical names on labels to make products more consumer-friendly. For example, “Triclosan (C₁₂H₇Cl₃O₂)” might seem confusing or intimidating, so “antibacterial agent” is used instead. Simplified labels help consumers feel more comfortable and confident in choosing products without being overwhelmed by scientific terms. This balance between clarity and transparency improves accessibility and marketability.</p>
-    </div>
-
-    <div class="footer">
-        <p>Prepared by: Lianne Joy E. Lopez | Section: Newton</p>
-    </div>
+<!-- Cover Page Section -->
+<div class="cover-page">
+    <h1>The Science Behind the Label: Decoding Everyday Ingredients</h1>
+    <h3>Exploring Chemical Components in Coca-Cola, Milk Loaded, and Safeguard</h3>
+    <p><strong>Name:</strong> Lianne Joy E. Lopez</p>
+    <p><strong>Section:</strong> Newton</p>
 </div>
 
-</body>
-</html>
+<!-- Interactive Table Section -->
+<h2 style="text-align: center; color: #4CAF50; font-size: 30px; animation: fadeIn 2s ease-out;">Chemical Composition Table</h2>
+
+<table id="productTable">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Ingredient</th>
+            <th>Chemical Name</th>
+            <th>Formula</th>
+            <th>Molecular Mass (g/mol)</th>
+            <th>Percentage Composition</th>
+            <th>Number of Moles</th>
+            <th>Empirical/Molecular Formula</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Coca-Cola</td>
+            <td>Carbonated Water</td>
+            <td>Water</td>
+            <td>H₂O</td>
+            <td>18</td>
+            <td>95%</td>
+            <td><input type="number" id="molesH2O" value="17.42" class="input-cell" onchange="calculateMoles()"></td>
+            <td>H₂O</td>
+        </tr>
+        <tr>
+            <td>Milk Loaded</td>
+            <td>Sugar (Sucrose)</td>
+            <td>Sucrose</td>
+            <td>C₁₂H₂₂O₁₁</td>
+            <td>342.3</td>
+            <td>30%</td>
+            <td><input type="number" id="molesSucrose" value="0.0438" class="input-cell" onchange="calculateMoles()"></td>
+            <td>C₁₂H₂₂O₁₁</td>
+        </tr>
+        <tr>
+            <td>Safeguard</td>
+            <td>Sodium Chloride</td>
+            <td>Sodium Chloride</td>
+            <td>NaCl</td>
+            <td>58.44</td>
+            <td>5%</td>
+            <td><input type="number" id="molesNaCl" value="0.0856" class="input-cell" onchange="calculateMoles()"></td>
+            <td>NaCl</td>
+        </tr>
+    </tbody>
+</table>
+
+<button class="btn" onclick="calculateMoles()">Calculate All Moles</button>
+
+<!-- Reflection Section -->
+<div class="reflection">
+    <h3>Reflection:</h3>
+    <p><strong>Importance of Understanding Chemical Composition:</strong>  
+        Knowing the chemical composition of products gives us better control over what we consume. For example, understanding the presence of **carbonated water (H₂O)** in Coca-Cola, **sucrose (C₁₂H₂₂O₁₁)** in Milk Loaded, and **sodium chloride (NaCl)** in Safeguard helps us make informed decisions about our health. These insights can affect our choices regarding nutrition, environmental impact, and overall well-being. When we understand how these substances work in our body and environment, we become more mindful consumers. It’s empowering to know how everyday items are connected to science.
+    </p>
+    <p><strong>Why Manufacturers Don't Use Chemical Names:</strong>  
+        Manufacturers opt for simpler, non-technical terms to make products more approachable. Chemical names can sound complex, so using names like **Sodium Chloride** instead of **NaCl** or **Sucrose** instead of its full formula makes it easier for the average consumer to understand. This strategy helps bridge the gap between scientific knowledge and the general public, ensuring that consumers feel more confident about the products they are using without being overwhelmed by scientific jargon.
+    </p>
+</div>
+
+<!-- Download Link -->
+<div style="text-align: center; margin-top: 30px;">
+    <a href="data:text/html;charset=utf-8,<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Chemical Composition of Everyday Products</title><style>body {font-family: Arial, sans-serif; background-color: #f5f5f5;} .cover-page {text-align: center; padding: 50
